@@ -34,6 +34,7 @@ if entered_pin == pin:
         if choice == "4":
             break
         else:
+            print("Please select 1-4 only!!")
             continue
 else:
     print("Invalid PIN")
