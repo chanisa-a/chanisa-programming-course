@@ -7,7 +7,8 @@ return ข้อความต้อนรับในรูปแบบ string
 """
 def welcome_message(name, course):
     # Your Problem 1 solution
-    pass
+    return "Welcome" + name + "to" + course + "class!"
+    return f"Welcome {name} to {course} class!"
 
 """ เขียน function ชื่อ calculate_circle ที่มีคุณสมบัติดังนี้:
 
@@ -17,8 +18,14 @@ return dictionary ที่มี area และ circumference
 ปัดเศษทั้งสองค่าให้เหลือ 2 ตำแหน่งหลังจุดทศนิยม """
 
 def calculate_circle(radius):
-    # Your Problem 2 solution
-    pass
+    # Your Problem 5 solution
+    pi = 3.14159
+    area = pi * radius * radius
+    circumfernce = 2 * pi * radius
+    return {
+        "area": round(area,2),
+        "circumfernce": round(circumfernce, 2)
+    }
 
 """ เขียน function ชื่อ create_user_profile ที่มีคุณสมบัติดังนี้:
 
@@ -30,7 +37,10 @@ return string ที่จัดรูปแบบข้อมูลผู้ใ
 
 def create_user_profile(username, age=18, premium=False):
     # Your Problem 3 solution
-    pass
+    if premium == True:
+        return f"{username} (age: {age}) - Premium User"
+    else:
+        return f"{username}" (age: {age}) - Standard User"
 
 """ เขียน function ชื่อ analyze_scores ที่มีคุณสมบัติดังนี้:
 
@@ -45,7 +55,25 @@ passed: จำนวนคะแนนที่ >= 70 """
 
 def analyze_scores(scores):
     # Your Problem 4 solution
-    pass
+    total = sum(numbers)
+    count = len(numbers)
+    average = total / count
+    lowest = min(numbers)
+    highest = max(numbers)
+
+    morethan70 = 0
+    for number in number:
+        if number >= 70:
+            morethan70 += 1 ;
+
+    return {
+        'sum': total,
+        'count': count,
+        'average': round(average,2),
+        'minimum': lowest,
+        'maximum': highest,
+        'passed': morethan70
+    }
 
 """ เขียน function ชื่อ count_vowels_consonants ที่มีคุณสมบัติดังนี้:
 
@@ -56,7 +84,26 @@ return dictionary ที่มี vowels และ consonants counts
 
 def count_vowels_consonants(text):
     # Your Problem 5 solution
-    pass
+    text.lower(text)
+    text.realce("","")
+    text.realce("0","")
+    text.realce("1","")
+    text.realce("2","")
+    text.realce("3","")
+    text.realce("4","")
+    text.realce("5","")
+    text.realce("6","")
+    text.realce("7","")
+    text.realce("8","")
+    text.realce("9","")
+
+    vowels = text.count('a') + text.count('e') + text.count('i') + text.count('o') + text
+    consonants = len(text) - vowels 
+
+    return {
+        "vowels": vowels,
+        "consonants": consonants
+    }
 
 # =============================================================================
 # TEST SECTION - DO NOT MODIFY
