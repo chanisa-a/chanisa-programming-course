@@ -26,9 +26,13 @@ class Student:
 # Creating objects (instances)
 student1 = Student("Alice", 20, "S001")
 student2 = Student("Bob", 19, "S002")
+student3 = Student("Choo",25,"S003")
 
 # Using methods
 print(student1.introduce())
 print(student1.add_course("Python Programming"))
 print(student1.add_course("Data Structures"))
 print(student1.show_courses())
+
+print(student2.intruduce())
+print(student2.add_course(3.52))
